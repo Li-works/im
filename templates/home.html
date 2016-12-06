@@ -1,0 +1,17 @@
+<div class="sk-home">		
+	<ul class="sk-home-panel" data-part="panelPart">
+        {=this}
+		{foreach src=this.allData}
+		{if item.type=="send_message"}
+		<li><span class="sk-home-user">{item.name}</span> say: {item.text}</li>
+		{else}
+		<li>{item.text}</li>
+		{/if}
+		{/foreach}
+	</ul>
+	<div>
+		<p>your Name: <input data-bind="name"></p>
+		<p>your Want To Say: <textarea data-bind="text"></textarea></p>
+		<p><button data-event="submit">submit</button></p>
+	</div>
+</div>	
