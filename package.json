@@ -1,0 +1,25 @@
+{
+  "name": "im",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/likaituan/im.git"
+  },
+  "author": "Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/likaituan/im/issues"
+  },
+  "homepage": "https://github.com/likaituan/im#readme",
+  "dependencies": {
+    "jquery": "latest",
+    "seekjs": "latest",
+    "seekjs-plugin-dialog": "latest",
+    "seekjs-plugin-mask": "latest"
+  }
+}

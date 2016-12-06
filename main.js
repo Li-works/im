@@ -1,30 +1,22 @@
 seekjs.config({
 	ns: {
-		js: seekjs.resolve("./js/"),
-		tp: seekjs.resolve("./templates/"),
-		st: seekjs.resolve("./css/"),
-		ex: seekjs.resolve("./ex/"),
+		util: "/utils/"
 	},
 	alias:{
-		service: seekjs.resolve("./ex/service")
+		service: "/utils/service.js"
 	}
 
 });
 
+var app = require("sys.app");
 
-define(function(req, exp){
-	"use strict";
-	var app = req("sys.app");
-
-	app.setPath({
-		js: "js.",
-		tp: "tp.",
-		st: "st."
-	});
-
-	app.usePlugin("sys.ui.mask");
-	app.usePlugin("sys.ui.dialog");
-
-	app.init("home");
-	
+app.config({
+	js: "/js/",
+	tp: "/templates/",
+	st: "/css/"
 });
+
+app.usePlugin("seekjs-plugin-mask");
+app.usePlugin("seekjs-plugin-dialog");
+
+app.init("home");
